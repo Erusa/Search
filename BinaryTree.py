@@ -22,7 +22,7 @@ class BinaryTree(object):
 
     def preorder_search(self, start, find_val):
         """Helper method - use this to create a 
-        recursive search solution."""
+        recursive search solution, as DFS Pre-Order Traversal"""
         if start== None:
             return False
         if start.value == find_val:

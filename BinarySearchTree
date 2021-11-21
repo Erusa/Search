@@ -27,16 +27,15 @@ class BST(object):
         return self.search_helper(self.root, find_val)
     
     def search_helper(self, current, find_val):
-        if current == None:
-            return False
-        
-        print(current.value, find_val)
-        if current.value == find_val:
-            return True
-        elif current.value < find_val:
-            self.search_helper(current.right, find_val)
-        else:    
-            self.search_helper(current.left, find_val)
+        if current:
+        #print(current.value, find_val)
+            if current.value == find_val:
+                return True
+            elif current.value < find_val:
+                self.search_helper(current.right, find_val)
+            else:    
+                self.search_helper(current.left, find_val)
+        return False
     
 # Set up tree
 tree = BST(4)
